@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9fa07f4e0b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="yitbe">
+     
+        <nav>
+            <h2 class="logo">yit<span>be</span></h2>
+            <ul>
+           <li> <a href="#">Home</a></li>
+           <li> <a href="#">About</a></li>
+           <li> <a href="#">Service</a></li>
+           <li> <a href="#">Contanct</a></li>
+            </ul>
+            <a href="#" class="btn">Subscribe</a>
+        </nav>
+        <div class="content">
+            <h4>Hello, my name is</h4>
+            <h1>Yitbarek Maru</h1>
+            <h3>I'am a Web & App Developer</h3>
+        </div>
+
+    </div>
+     <!---------------------About------------>
+
+   <section class="about">
+    <div class="main">
+        <img src="img/yitbe.jpg">
+        <div class="about-text">
+            <h2>About Me</h2>
+            <h5>Developer & <span>Designer</span></h5>
+            <p>I am a regular computer science student in Ethiopia Debre Tabore University. I can provide clean code and pixel
+            perfect design I also make the website more & more interactive with web animations.
+            A responsive design makes your website accessible to all users, regadless of their device</p>
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">skill</p>
+                <p class="tab-links" onclick="opentab('experience')">experience</p>
+                <p class="tab-links" onclick="opentab('education')">education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Web Development</span><br>Building web apps</li>
+                    <li><span>App Development</span><br>Building Andoroid/iOS apps</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>2011 - 2012</span><br>Simple App Development at AMU Community school</li>
+                    <li><span>2013 - Current</span><br>Web Development & GUI Android App Development</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2011 - 2012</span><br>Basics to App Devlopment at AMU Community school</li>
+                    <li><span>2013 - Current</span><br>HTML,CSS,JS & Java at DTU</li>
+                </ul>
+            </div>
+            <button type="button">Let's Talk</button>
+        </div>
+    </div>
+   </section>
+
+   <!----------------------service---------------------->
+   <div class="service">
+    <div class="title">
+        <h2>My Service</h2>
+    </div>
+    <div class="box">
+        <div class="card">
+            <i class="fa-solid fa-bars"></i>
+            <h5>Web Development</h5>
+            <div class="para">
+                <p>Every website should be built with two primary goals: Firstly, it needs
+                     to work across all devices. Sencondly, it needs to be fast as possible.</p>
+                     <p style="text-align:center;">
+                        <a class="button" href="#">Read More</a>
+                     </p>
+            </div>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-user"></i>
+            <h5>DataBase Development</h5>
+            <div class="para">
+                <p>Every DataBase should be built with two primary goals: Firstly, it needs
+                     to work across all devices. Sencondly, it needs to be fast as possible.</p>
+                     <p style="text-align:center;">
+                        <a class="button" href="#">Read More</a>
+                     </p>
+            </div>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-bell"></i>
+            <h5>App Development</h5>
+            <div class="para">
+                <p>Every App should be built with two primary goals: Firstly, it needs
+                     to work across all devices. Sencondly, it needs to be fast as possible.</p>
+                     <p style="text-align:center;">
+                        <a class="button" href="#">Read More</a>
+                     </p>
+            </div>
+        </div>
+    </div>
+   </div>
+
+
+   <!---------------contact-------------------->
+
+   <div class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+              <h1 class="sub-title">Contact Me</h1>
+              <p><i class="fa-solid fa-paper-plane"></i>yitbemaru23@gmail.com</p>
+              <p><i class="fa-solid fa-phone"></i>0970347887</p>
+              <div class="social-icon">
+                <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-twitter-square"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-linkedin"></i></a>
+              </div>
+              <a href="" class="btn btn2">Download Cv</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name"required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+   <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+   </script>  
+
+    
+    
+</body>
+</html>
